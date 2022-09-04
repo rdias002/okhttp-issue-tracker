@@ -7,22 +7,20 @@
 
     <fragment
         android:id="@+id/IssuesListFragment"
-        android:name="com.example.tracker.IssuesListFragment"
+        android:name="com.example.tracker.presentation.fragments.IssuesListFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_issues_list">
-
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/IssueDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/IssueDetailsFragment"
-        android:name="com.example.tracker.IssueDetailsFragment"
+        android:name="com.example.tracker.presentation.fragments.IssueDetailsFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_issue_details">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/IssuesListFragment" />
+        <argument
+            android:name="issue"
+            app:argType="com.example.tracker.domain.model.Issue" />
     </fragment>
 </navigation>
