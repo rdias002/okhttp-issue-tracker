@@ -1,7 +1,7 @@
 package com.example.tracker.data.local
 
 import androidx.room.*
-import com.example.tracker.data.datasource.IssueCommentsPagingDataSource.Companion.PAGE_SIZE
+import com.example.tracker.data.paging_data_source.IssueCommentsPagingDataSource.Companion.PAGE_SIZE
 import com.example.tracker.data.local.entity.IssueCommentEntity
 import com.example.tracker.data.local.entity.IssueEntity
 
