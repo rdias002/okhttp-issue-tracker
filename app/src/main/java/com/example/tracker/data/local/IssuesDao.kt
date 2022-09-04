@@ -9,7 +9,7 @@ import com.example.tracker.data.local.entity.IssueEntity
 interface IssuesDao {
 
     //Issues
-    @Query("SELECT * FROM issues_table LIMIT :limit OFFSET :offset")
+    @Query("SELECT * FROM issues_table ORDER BY createdAt DESC LIMIT :limit OFFSET :offset")
     suspend fun getIssues(offset: Int, limit: Int = PAGE_SIZE): List<IssueEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
